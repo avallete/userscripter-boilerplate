@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:avallete/yt-playlists-delete-enhancer.git"
+    "url": "git@github.com:avallete/userscripter-boilerplate.git"
   },
   "author": "Andrew Valleteau <avallete@student.42.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/avallete/yt-playlists-delete-enhancer/issues"
+    "url": "https://github.com/avallete/userscripter-boilerplate/issues"
   },
-  "homepage": "https://github.com/avallete/yt-playlists-delete-enhancer#readme",
+  "homepage": "https://github.com/avallete/userscripter-boilerplate#readme",
   "dependencies": {
     "@typed/compose": "1.0.0",
     "@types/app-root-path": "1.2.4",
