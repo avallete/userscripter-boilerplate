@@ -2,7 +2,7 @@
 
 A quick boilerplate for userscripter projects with e2e testing using cypress, ava for unit-testing, semantic-release and CI/CD with github actions
 
-## What's in ?
+## What's in it ?
 
 - Easy unit-testing and coverage using [AVA](https://github.com/avajs/ava)
 - Ready to go e2e-testing using [Cypress](https://github.com/cypress-io/cypress)
