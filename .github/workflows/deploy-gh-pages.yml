@@ -1,10 +1,8 @@
-name: Release
+name: Deploy to Github Pages
 
 on:
-  push:
-    branches: [ $default-branch ]
-    tags:
-      - 'v*'
+  release:
+    types: [published]
 jobs:
   build:
     name: Build
@@ -22,22 +20,10 @@ jobs:
         run: |
           npm ci
       - name: Lint
-        run: |
-          npm run lint
-      - name: Unit-tests
-        run: |
-          npm run unit-test
-      - name:
-          Coverage
-          # Could be replaced with coverage-all if you want to ensure new files are tested as well
-        run: |
-          npm run coverage
-      - name: E2E-tests
-        uses: cypress-io/github-action@v2
         env:
           USERSCRIPTER_MODE: production
-        with:
-          build: npm run build
+        run: |
+          npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:

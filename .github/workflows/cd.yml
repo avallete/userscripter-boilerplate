@@ -1,10 +1,11 @@
 name: CD
 
 on:
-  pull_request:
-    branches: [ $default-branch ]
+  # Use semantic-release to publish a new release to git
+  # It will be pick up by deploy-gh-pages
   push:
-    branches: [ $default-branch ]
+    branches:
+      - master
 jobs:
   build:
     name: Build
