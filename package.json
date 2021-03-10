@@ -1,5 +1,6 @@
 {
   "version": "1.0.0",
+  "name": "userscripter-boilerplate",
   "private": true,
   "scripts": {
     "build-webpack-config": "tsc -p tsconfig.webpack.json",
@@ -80,6 +81,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       "@semantic-release/git",
       "@semantic-release/github"
     ]

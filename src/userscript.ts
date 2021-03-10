@@ -1,6 +1,6 @@
 export default {
-  id: 'my-awesome-userscript',
-  name: 'My awesome userscript',
+  id: 'userscripter-boilerplate',
+  name: 'userscripter-boirlerplate',
   description: 'some description for the script',
   // Automatically match the userscript metadata version to the package.json one
   version: process.env.npm_package_version || '1.0.0',
