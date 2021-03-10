@@ -1,9 +1,10 @@
-name: CI
+name: CD
 
 on:
-  # CD workflow is responsible for building and release on push to master
-  pull_request:
+  push:
     branches: [$default-branch]
+    tags:
+      - 'v*'
 jobs:
   build:
     name: Build
@@ -13,7 +14,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          persist-credentials: false
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -27,11 +27,20 @@ jobs:
       - name: Unit-tests
         run: |
           npm run unit-test
-      - name: Coverage
-        # Could be replaced with coverage-all if you want to ensure new files are tested as well
+      - name:
+          Coverage
+          # Could be replaced with coverage-all if you want to ensure new files are tested as well
         run: |
           npm run coverage
       - name: E2E-tests
         uses: cypress-io/github-action@v2
+        env:
+          USERSCRIPTER_MODE: production
         with:
           build: npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
