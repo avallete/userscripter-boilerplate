@@ -3,7 +3,7 @@ name: CI
 on:
   # CD workflow is responsible for building and release on push to master
   pull_request:
-    branches: [$default-branch]
+    branches: [ $default-branch ]
 jobs:
   build:
     name: Build

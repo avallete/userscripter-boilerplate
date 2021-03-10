@@ -2,9 +2,9 @@ name: CD
 
 on:
   pull_request:
-    branches: [$default-branch]
+    branches: [ $default-branch ]
   push:
-    branches: [$default-branch]
+    branches: [ $default-branch ]
 jobs:
   build:
     name: Build
