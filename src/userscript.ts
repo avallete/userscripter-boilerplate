@@ -19,19 +19,20 @@ export type UserscriptMetadata = Metadata & {
 }
 
 const userscriptMetadata: UserscriptMetadata = {
-  id: package_json.name,
-  name: package_json.name,
+  id: package_json.name, // Used to generate the final dist files (like so: `${id}.user.js`)
+  name: package_json.name, // Used into metadata and manifest.json as extension/userscript name
   description: package_json.description,
-  // Automatically match the userscript metadata version to the package.json one
-  version: package_json.version,
+  version: package_json.version, // Automatically match the userscript metadata version to the package.json one
   author: package_json.author,
   homepage: package_json.homepage,
   support: package_json.bugs.url,
-  hostname: 'example.cypress.io',
-  sitename: package_json.repository.url,
+  hostname: 'example.cypress.io', // Will be used to generate matches (see: metadata.ts)
+  sitename: package_json.repository.url, // Used to generate the downloadURL of your userscript into metadata.ts
   repositoryURL: package_json.repository.url,
   license: package_json.license,
   run_at: 'document-idle',
+  // Will be used to generate the downloadURL into metadata.ts
+  // Make sure it match the branch where final release are pushed (see .github/workflow/deploy-gh-pages.yml)
   releaseBranch: 'gh-pages',
 }
 
