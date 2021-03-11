@@ -8,5 +8,11 @@
     "dist/**",
     "cypress/**",
     "test/**"
-  ]
+  ],
+  "reporter": [
+    "text"
+  ],
+  "lines": 90,
+  "branches": 90,
+  "statements": 90
 }
