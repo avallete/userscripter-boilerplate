@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "userscripter-boirlerplate",
+  "version": "1.0.0",
+  "description": "some description for the script",
+  "author": "author",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://example.cypress.io/*",
+        "*://www.example.cypress.io/*"
+      ],
+      "js": [
+        "userscripter-boilerplate.user.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
