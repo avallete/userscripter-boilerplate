@@ -1,8 +1,8 @@
 name: CD
 
 on:
-  # Use semantic-release to publish a new release to git
-  # It will be pick up by deploy-gh-pages
+  # Use semantic-release to publish the updated package.json to master branch with a new release and tag
+  # deploy-gh-pages is responsible to build production version and publish it to gh-pages branch
   push:
     branches:
       - master
@@ -26,9 +26,6 @@ jobs:
       - name: Lint
         run: |
           npm run lint
-      - name: Unit-tests
-        run: |
-          npm run unit-test
       - name: Coverage
         # Could be replaced with coverage-all if you want to ensure new files are tested as well
         run: |
