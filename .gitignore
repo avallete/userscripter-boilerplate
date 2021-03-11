@@ -9,3 +9,5 @@ dist/
 coverage/
 cypress/videos/
 cypress/screenshots/
+.vscode
+.dccache
