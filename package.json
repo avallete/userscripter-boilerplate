@@ -14,7 +14,8 @@
     "e2e-test": "npx cypress run",
     "test": "npm run unit-test && npm run e2e-test",
     "coverage": "npx nyc ava",
-    "coverage-all": "npx nyc --all ava"
+    "coverage:all": "npx nyc --all ava",
+    "coverage:report": "npx nyc --check-coverage=false report --reporter=json"
   },
   "repository": {
     "type": "git",

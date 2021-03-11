@@ -28,7 +28,13 @@ jobs:
         # Could be replaced with coverage-all if you want to ensure new files are tested as well
         run: |
           npm run coverage
+          npm run coverage:report
       - name: E2E-tests
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
+      - name: Upload coverage to CodeCov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: coverage
