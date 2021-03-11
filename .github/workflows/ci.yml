@@ -24,9 +24,6 @@ jobs:
       - name: Lint
         run: |
           npm run lint
-      - name: Unit-tests
-        run: |
-          npm run unit-test
       - name: Coverage
         # Could be replaced with coverage-all if you want to ensure new files are tested as well
         run: |
