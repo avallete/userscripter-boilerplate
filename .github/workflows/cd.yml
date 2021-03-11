@@ -43,3 +43,8 @@ jobs:
           GIT_AUTHOR_EMAIL: 44210433+github-actions@users.noreply.github.com
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: 44210433+github-actions@users.noreply.github.com
+      - name: Upload coverage to CodeCov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: .nyc_output

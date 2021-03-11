@@ -32,3 +32,8 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
+      - name: Upload coverage to CodeCov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: .nyc_output
