@@ -50,6 +50,7 @@ jobs:
           GIT_COMMITTER_EMAIL: 44210433+github-actions@users.noreply.github.com
       - name: Upload coverage to CodeCov
         uses: codecov/codecov-action@v1
+        continue-on-error: true
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           directory: coverage
