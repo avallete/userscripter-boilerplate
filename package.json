@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
   "name": "userscripter-boilerplate",
+  "description": "some description for your userscript",
   "private": true,
   "scripts": {
     "build-webpack-config": "tsc -p tsconfig.webpack.json",
@@ -96,6 +97,7 @@
     "@semantic-release/git": "github:semantic-release/git",
     "@semantic-release/github": "github:semantic-release/github",
     "@semantic-release/release-notes-generator": "github:semantic-release/release-notes-generator",
+    "@types/sinon": "^9.0.11",
     "@typescript-eslint/eslint-plugin": "4.17.0",
     "@typescript-eslint/parser": "4.17.0",
     "ava": "3.15.0",
@@ -119,6 +121,7 @@
     "nyc": "15.1.0",
     "prettier": "2.2.1",
     "semantic-release": "17.4.2",
+    "sinon": "^9.2.4",
     "ts-node": "9.1.1",
     "tsconfig-paths": "3.9.0"
   }
