@@ -44,6 +44,15 @@ export const MetadataSchema = {
   },
 }
 
+export function generateDownloadUrlFromRepositoryUrl(repositoryUrl: string): string {
+  const gitRepoExtractorRegex = /^(?:https|git|git\+ssh)[:@](?:\/\/)?[^/:]+[/:]([^/:]+\/.+).git$/
+  const match = repositoryUrl.match(gitRepoExtractorRegex)
+  if (match !== null && match.length === 2) {
+    return `https://raw.githubusercontent.com/${match[1]}/${U.releaseBranch}/${distFileName(U.id, 'user')}`
+  }
+  return ''
+}
+
 // Will generate the metadata for the code as userscript
 export default function metadataConfigFactory(): ViolentMonkeyMetadata {
   return {
@@ -54,7 +63,7 @@ export default function metadataConfigFactory(): ViolentMonkeyMetadata {
     grant: 'none',
     match: [`*://${U.hostname}/*`, `*://www.${U.hostname}/*`],
     namespace: 'greasyfork-namespace-url',
-    downloadURL: U.repositoryURL,
+    downloadURL: generateDownloadUrlFromRepositoryUrl(U.repositoryURL),
     noframes: true,
     homepageURL: U.homepage,
     supportURL: U.support,
