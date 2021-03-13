@@ -103,7 +103,7 @@
     "ava": "3.15.0",
     "cross-env": "7.0.3",
     "cypress": "6.6.0",
-    "eslint": "7.21.0",
+    "eslint": "7.22.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-airbnb-typescript": "12.3.1",
     "eslint-config-prettier": "8.1.0",
