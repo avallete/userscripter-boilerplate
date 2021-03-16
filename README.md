@@ -68,7 +68,7 @@ work out of the box, you don't have anything to do.
 
 But for CD (automatic version release) and CodeCov PR annotation, you gonna need to do some little configuration.
 
-1. How to setup automatic release (CD) ?
+### How to setup automatic release (CD) ?
 
 To create new releases, the CD use `semantic-release/git` which will automatically update the `package.json` version and push it to the master branch.
 Then, each release is picked up by another action and a new build is publish to the `gh-pages` branch of the repository.
@@ -79,13 +79,14 @@ To use this workflow you gonna need to:
 2. [Add this PAT in your repository as secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) naming it `GH_SEMANTIC_RELEASE_TOKEN`
 3. That's it !
 
-4. How to setup automatic [CodeCov](https://about.codecov.io/) annotation (CI/CD) ?
 
-5. Create/Add your project to your CodeCov dashboard
-6. [Get back your repository token](https://docs.codecov.io/docs/frequently-asked-questions#where-is-the-repository-upload-token-found)
-7. [Add this token in your repository as secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) naming it `CODECOV_TOKEN`
+### How to setup automatic [CodeCov](https://about.codecov.io/) annotation (CI/CD) ?
 
-8. How to have the others third party Github integrations ?
+1. Create/Add your project to your CodeCov dashboard
+2. [Get back your repository token](https://docs.codecov.io/docs/frequently-asked-questions#where-is-the-repository-upload-token-found)
+3. [Add this token in your repository as secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) naming it `CODECOV_TOKEN`
+
+### How to have the others third party Github integrations ?
    Some other integrations are setup in this project because I think they are useful. However, if your create a private project or a simple one, you may want to skip them.
    Still, here is the list of the integrations setup to work with this project structure, you just have to sign-up and add your repository to enable them:
 
