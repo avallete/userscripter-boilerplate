@@ -14,6 +14,6 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./**/*.ts", "./package.json"],
+  "include": ["./**/*.ts", "./metadata-config.json"],
   "exclude": ["./test/*"]
 }
