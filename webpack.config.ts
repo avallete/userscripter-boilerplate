@@ -1,10 +1,10 @@
 import * as AppRootPath from 'app-root-path'
 import { createWebpackConfig, DEFAULT_BUILD_CONFIG } from 'userscripter/build'
-import METADATA, { MetadataSchema } from './metadata'
 import U from './src/userscript'
+import METADATA, { MetadataSchema } from './metadata'
+import MANIFEST from './manifest'
 import * as CONFIG from './src/config'
 import * as SITE from './src/site'
-import MANIFEST from './manifest'
 
 const webpackConfig = createWebpackConfig({
   buildConfig: {
