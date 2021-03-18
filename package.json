@@ -42,9 +42,6 @@
     "webpack": "4.46.0",
     "webpack-cli": "3.3.12"
   },
-  "comments": {
-    "dependencies": "We use a custom userscripter while waiting for the merge of https://github.com/SimonAlling/userscripter/pull/38"
-  },
   "ava": {
     "files": [
       "test/**/*"
