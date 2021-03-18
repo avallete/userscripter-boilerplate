@@ -16,8 +16,8 @@
     "pree2e-test": "cross-env NODE_ENV=test npm run build",
     "e2e-test": "npx cypress run",
     "test": "npm run unit-test && npm run e2e-test",
-    "coverage": "npx nyc ava",
-    "coverage:all": "npx nyc --all ava",
+    "coverage": "npx nyc npm run unit-test",
+    "coverage:all": "npx nyc --all npm run unit-test",
     "coverage:report": "npx nyc --check-coverage=false report --reporter=json"
   },
   "repository": {
