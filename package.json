@@ -96,7 +96,7 @@
     "@semantic-release/git": "github:semantic-release/git",
     "@semantic-release/github": "github:semantic-release/github",
     "@semantic-release/release-notes-generator": "github:semantic-release/release-notes-generator",
-    "@types/sinon": "9.0.11",
+    "@types/sinon": "10.0.2",
     "@typescript-eslint/eslint-plugin": "4.26.1",
     "@typescript-eslint/parser": "4.26.1",
     "ava": "3.15.0",
