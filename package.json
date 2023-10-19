@@ -96,7 +96,7 @@
     "@semantic-release/git": "github:semantic-release/git",
     "@semantic-release/github": "github:semantic-release/github",
     "@semantic-release/release-notes-generator": "github:semantic-release/release-notes-generator",
-    "@types/sinon": "9.0.11",
+    "@types/sinon": "10.0.20",
     "@typescript-eslint/eslint-plugin": "4.26.1",
     "@typescript-eslint/parser": "4.26.1",
     "ava": "3.15.0",
@@ -122,7 +122,7 @@
     "nyc": "15.1.0",
     "prettier": "2.2.1",
     "semantic-release": "17.4.2",
-    "sinon": "10.0.0",
+    "sinon": "10.0.1",
     "ts-node": "9.1.1",
     "tsconfig-paths": "3.9.0"
   }
